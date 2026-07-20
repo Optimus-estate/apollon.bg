@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Аполон — 10 затворени комплекса до морето | OPTIMUS ESTATE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#FAF8F3;color:#1a1a1a;display:flex;flex-direction:column;align-items:center}
+body>*{width:100%;max-width:900px}
+
+/* ── NAVBAR ── */
+.navbar{background:#FAF8F3;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #EDE7DC;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-svg{width:38px;height:38px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Inter',sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1C2B4B;line-height:1.2}
+.logo-sub{font-family:'Inter',sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1C2B4B;line-height:1.2}
+.btn-orange{background:#E8622A;color:#fff;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:10px 16px;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-decoration:none}
+.btn-orange-sub{font-size:8px;font-weight:400;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:4px}
+.btn-orange-sub svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ── HERO ── */
+.hero{padding:32px 32px 0;display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start}
+.hero-left{}
+.breadcrumbs{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#E8622A;margin-bottom:14px}
+.breadcrumbs span{color:#999;margin:0 6px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#1C2B4B;line-height:1.1;margin-bottom:16px}
+.hero-divider{width:40px;height:3px;background:#E8622A;margin-bottom:16px}
+.hero-desc{font-size:13px;color:#444;line-height:1.65;margin-bottom:24px}
+.hero-icons{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #EDE7DC;margin-top:24px}
+.hero-icon-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:16px 8px;border-right:1px solid #EDE7DC}
+.hero-icon-item:last-child{border-right:none}
+.hero-icon-circle{width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+.hero-icon-circle svg{width:26px;height:26px;stroke:#1C2B4B;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hero-icon-label{font-size:10px;color:#444;line-height:1.4;max-width:80px}
+.hero-right{}
+.hero-img{width:100%;border-radius:6px;object-fit:cover;display:block}
+.hero-img-placeholder{width:100%;height:200px;background:#e8e0d4;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#999}
+
+/* ── SECTION COMMON ── */
+.section{padding:40px 32px}
+.section-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#E8622A;margin-bottom:12px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#1C2B4B;line-height:1.15;margin-bottom:20px}
+.section-divider{width:100%;height:1px;background:#EDE7DC;margin:40px 0}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.about-text{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px}
+.about-text b{font-weight:700;color:#1a1a1a}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#EDE7DC;border:1px solid #EDE7DC;border-radius:4px;overflow:hidden;margin-top:28px}
+.stat-cell{background:#FAF8F3;padding:20px 24px}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:#E8622A;line-height:1}
+.stat-unit{font-size:12px;color:#777;margin-top:4px}
+.stat-num-green{color:#2D9B6F}
+
+/* ── GALLERY ── */
+.gallery-tabs{display:flex;gap:0;margin-bottom:16px}
+.gallery-tab{font-size:11px;font-weight:600;padding:7px 16px;cursor:pointer;border:none;background:#1C2B4B;color:#fff}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:4px;border-radius:6px;overflow:hidden}
+.gallery-img-big{grid-row:1/3;width:100%;height:100%;object-fit:cover;display:block}
+.gallery-img-small{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-placeholder{background:#d4cfc8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#888;width:100%;height:100%}
+
+/* ── INFRASTRUCTURE ── */
+.infra-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.infra-list{list-style:none}
+.infra-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid #EDE7DC}
+.infra-item:last-child{border-bottom:none}
+.infra-num{font-size:11px;font-weight:700;color:#E8622A;flex-shrink:0;width:20px;margin-top:1px}
+.infra-text{font-size:13px;color:#1a1a1a;line-height:1.4}
+.distance-section{margin-bottom:24px}
+.distance-title{font-size:13px;font-weight:700;color:#1C2B4B;margin-bottom:10px}
+.distance-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #EDE7DC}
+.distance-row:last-child{border-bottom:none}
+.distance-label{font-size:13px;color:#444}
+.distance-value{font-size:13px;font-weight:500;color:#1a1a1a}
+
+/* ── FINANCE ── */
+.finance-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.tax-table{background:#fff;border:1px solid #EDE7DC;border-radius:4px;overflow:hidden}
+.tax-table-title{font-size:10px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:0.8px;padding:12px 16px;border-bottom:1px solid #EDE7DC}
+.tax-row{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid #EDE7DC}
+.tax-row:last-child{border-bottom:none}
+.tax-label{font-size:13px;color:#444}
+.tax-value{font-size:13px;font-weight:600;color:#1a1a1a}
+.commission-box{background:#FAF8F3;border:1px solid #EDE7DC;border-radius:4px;padding:20px}
+.commission-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:#2D9B6F;margin-bottom:8px}
+.commission-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#1C2B4B;margin-bottom:10px}
+.commission-text{font-size:12px;color:#555;line-height:1.6}
+
+/* ── CTA ── */
+.cta-section{background:#1C2B4B;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
+.cta-sub{font-size:12px;color:rgba(255,255,255,0.7)}
+.btn-cta{background:transparent;border:1px solid rgba(255,255,255,0.4);color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:10px 20px;cursor:pointer;display:flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.btn-cta svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ── CONTACTS ── */
+.contacts-section{padding:36px 32px}
+.contacts-label{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#E8622A;margin-bottom:12px}
+.contacts-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1C2B4B;margin-bottom:24px}
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:#fff;border:1px solid #EDE7DC;border-radius:4px}
+.contact-name{font-size:14px;font-weight:700;color:#1C2B4B;margin-bottom:4px}
+.contact-phone{font-size:13px;color:#E8622A;font-weight:500}
+.btn-whatsapp{background:#2D9B6F;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:10px 18px;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;text-decoration:none;white-space:nowrap;border-radius:2px}
+.btn-whatsapp svg{width:15px;height:15px;fill:#fff}
+
+/* ── FOOTER ── */
+.footer{background:#FAF8F3;border-top:1px solid #EDE7DC;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.footer-logo{display:flex;align-items:center;gap:8px}
+.footer-links{font-size:11px;color:#777}
+.footer-links a{color:#E8622A;text-decoration:none}
+.footer-copy{font-size:10px;color:#aaa;text-align:center}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .about-grid{grid-template-columns:1fr !important}
+  .hero{grid-template-columns:1fr;padding:24px 16px 0}
+  .hero-right{order:-1}
+  .hero-icons{grid-template-columns:repeat(2,1fr)}
+  .section{padding:28px 16px}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .infra-grid{grid-template-columns:1fr}
+  .finance-grid{grid-template-columns:1fr}
+  .cta-section{flex-direction:column;padding:24px 16px;align-items:flex-start}
+  .contacts-grid{grid-template-columns:1fr}
+  .footer{padding:20px 16px}
+  .navbar{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo-bez.png" alt="logo" class="logo-img" style="height:50px;width:auto"/>
+    <div class="logo-text">
+      <span class="logo-name">OPTIMUS</span>
+      <span class="logo-sub">ESTATE</span>
+    </div>
+  </div>
+  <a href="https://optimus-presentacion-ru.netlify.app/" class="btn-orange">
+    НАУЧЕТЕ ПОВЕЧЕ ЗА НАС
+    <span class="btn-orange-sub">
+      ВИЖТЕ ПРЕЗЕНТАЦИЯТА
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </span>
+  </a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="breadcrumbs">РАВДА <span>·</span> НЕСЕБЪР <span>·</span> БЪЛГАРИЯ</div>
+    <h1 class="hero-title">Аполон — 10 затворени<br>комплекса до морето</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">Семеен комплекс до морето с отлично сезонно търсене под наем. Студия, 1, 2 и 3 спални — с площ 26–110 м². Всички сгради с Акт 16.</p>
+  </div>
+  <div class="hero-right">
+    <img src="apollon.jpg" alt="Apollon Complexes" class="hero-img"/>
+  </div>
+</div>
+<div class="hero-icons">
+  <div class="hero-icon-item">
+    <div class="hero-icon-circle">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l-2 2"/><line x1="12" y1="3" x2="12" y2="1"/></svg>
+    </div>
+    <span class="hero-icon-label">Няма имоти в открит достъп</span>
+  </div>
+  <div class="hero-icon-item">
+    <div class="hero-icon-circle">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span class="hero-icon-label">Ексклузивни продажби</span>
+  </div>
+  <div class="hero-icon-item">
+    <div class="hero-icon-circle">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+    </div>
+    <span class="hero-icon-label">Готови документи и съдействие</span>
+  </div>
+  <div class="hero-icon-item">
+    <div class="hero-icon-circle">
+      <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 19c0-3.3 3.1-6 7-6h6c3.9 0 7 2.7 7 6"/></svg>
+    </div>
+    <span class="hero-icon-label">Само чрез партньори</span>
+  </div>
+</div>
+
+<!-- ══ О КОМПЛЕКСАХ ══ -->
+<div class="section">
+  <div class="section-label">ЗА КОМПЛЕКСИТЕ</div>
+  <h2 class="section-title">Единен стил,<br>различен мащаб</h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-text">Аполон — това са <b>10 затворени комплекса</b>, построени в единен архитектурен стил между Несебър и Равда. Всяка сграда е разположена на собствена затворена територия с охрана.</p>
+      <p class="about-text">Разпределения от компактни студия до тристайни апартаменти — с площ <b>26–110 м²</b>. Подходящо както за почивка, така и за постоянно обитаване, и за отдаване под наем.</p>
+    </div>
+    <div class="about-stats" style="margin-top:-20px">
+      <div class="stat-cell">
+        <div class="stat-num">10</div>
+        <div class="stat-unit">комплекса</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">5-6</div>
+        <div class="stat-unit">етажа · асансьор</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" style="font-size:24px">7</div>
+        <div class="stat-unit">басейна</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num stat-num-green">Акт 16</div>
+        <div class="stat-unit">всички сгради</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ГАЛЕРЕЯ ══ -->
+<div class="section" style="padding-top:0">
+  <div class="section-label">ФОТОГАЛЕРИЯ</div>
+  <h2 class="section-title">Как изглежда Аполон</h2>
+  <div class="gallery-tabs">
+    <button class="gallery-tab">Аполон · Равда</button>
+  </div>
+  <div class="gallery-grid">
+    <img src="apollon-1.jpg" alt="Аполон снимка 1" class="gallery-img-big" onerror="this.style.background='#d4cfc8';this.alt='Снимка на комплекса'"/>
+    <img src="apollon-2.jpg" alt="Аполон снимка 2" class="gallery-img-small" onerror="this.style.background='#c8c2ba';this.alt='Снимка на комплекса'"/>
+    <img src="apollon-3.jpg" alt="Аполон снимка 3" class="gallery-img-small" onerror="this.style.background='#bfb9b1';this.alt='Снимка на комплекса'"/>
+  </div>
+</div>
+
+<!-- ══ ИНФРАСТРУКТУРА ══ -->
+<div class="section" style="padding-top:0">
+  <div class="section-label">ИНФРАСТРУКТУРА И РАЗПОЛОЖЕНИЕ</div>
+  <h2 class="section-title">Всичко наблизо</h2>
+  <div class="infra-grid">
+    <div>
+      <ul class="infra-list">
+        <li class="infra-item"><span class="infra-num">01</span><span class="infra-text">7 басейна на територията на комплекса</span></li>
+        <li class="infra-item"><span class="infra-num">02</span><span class="infra-text">Зона за отдих и слънчеви бани</span></li>
+        <li class="infra-item"><span class="infra-num">03</span><span class="infra-text">Детска площадка</span></li>
+        <li class="infra-item"><span class="infra-num">04</span><span class="infra-text">Ресторант (в един от комплексите)</span></li>
+        <li class="infra-item"><span class="infra-num">05</span><span class="infra-text">Бар</span></li>
+        <li class="infra-item"><span class="infra-num">06</span><span class="infra-text">Охрана 24/7</span></li>
+        <li class="infra-item"><span class="infra-num">07</span><span class="infra-text">Поддържана затворена територия</span></li>
+        <li class="infra-item"><span class="infra-num">08</span><span class="infra-text">Паркинг наблизо</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="distance-section">
+        <div class="distance-title">В пешеходна достъпност</div>
+        <div class="distance-row"><span class="distance-label">Lidl</span><span class="distance-value">5 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Училище</span><span class="distance-value">7 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Ресторанти и кафенета</span><span class="distance-value">3 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Плаж</span><span class="distance-value">2 мин</span></div>
+      </div>
+      <div class="distance-section">
+        <div class="distance-title">Разстояния с кола</div>
+        <div class="distance-row"><span class="distance-label">Несебър</span><span class="distance-value">10 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Равда</span><span class="distance-value">2 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Поморие</span><span class="distance-value">20 мин</span></div>
+        <div class="distance-row"><span class="distance-label">Бургас + летище</span><span class="distance-value">35 мин</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ФИНАНСЫ ══ -->
+<div class="section" style="padding-top:0">
+  <div class="section-label">УСЛОВИЯ</div>
+  <h2 class="section-title">Финансова страна</h2>
+  <div class="finance-grid">
+    <div class="tax-table">
+      <div class="tax-table-title">Такса поддръжка по комплекси</div>
+      <div class="tax-row"><span class="tax-label">Аполон 2–6</span><span class="tax-value">11 €/м²</span></div>
+      <div class="tax-row"><span class="tax-label">Аполон 7–9</span><span class="tax-value">12 €/м²</span></div>
+      <div class="tax-row"><span class="tax-label">Аполон Несебър</span><span class="tax-value">12 €/м²</span></div>
+    </div>
+    <div class="commission-box">
+      <div class="commission-label">Комисиона</div>
+      <div class="commission-title">В цената няма комисиона</div>
+      <p class="commission-text">Добавяте отгоре — тя е изцяло ваша. Регистрация на клиента при първия съвместен оглед.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<div class="cta-section">
+  <div>
+    <div class="cta-title">Готови ли сте да покажете на клиент?</div>
+    <div class="cta-sub">Вижте актуалната ценова листа за всички подкомплекси на Аполон</div>
+  </div>
+  <a href="https://airtable.com/app4flQF8p47DvF7v/shrOfWUrVA1HO54K1/tbl56x9OZb7wZEV4W" target="_blank" class="btn-cta">
+    Вижте цени Аполон
+    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<!-- ══ КОНТАКТЫ ══ -->
+<div class="contacts-section">
+  <div class="contacts-label">СВЪРЖЕТЕ СЕ С НАС</div>
+  <h2 class="contacts-title">За въпроси относно огледи</h2>
+  <div class="contacts-grid">
+    <div class="contact-card">
+      <div>
+        <div class="contact-name">Александър</div>
+        <div class="contact-phone">+359 87 769 25 46</div>
+      </div>
+      <a href="https://wa.me/35987769254" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="contact-card">
+      <div>
+        <div class="contact-name">Василий</div>
+        <div class="contact-phone">+359 89 517 66 85</div>
+      </div>
+      <a href="https://wa.me/35989517668" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="logo.png" alt="logo" class="logo-img" style="height:100px;width:auto"/>
+  </div>
+  <div class="footer-links">
+    <a href="https://bolgarskidom.com">bolgarskidom.com</a> · <a href="mailto:optimusbg@mail.ru">optimusbg@mail.ru</a>
+  </div>
+  <div class="footer-copy">Презентация на комплекс Аполон · Равда, България</div>
+</footer>
+
+</body>
+</html>
