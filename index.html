@@ -11,6 +11,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:#FAF8F3;color:#1a1a1a;display:flex;flex-direction:column;align-items:center}
 body>*{width:100%;max-width:900px}
+@media(min-width:1100px){body>*{max-width:1000px}}
+@media(min-width:1500px){body>*{max-width:1120px}}
 
 /* ── NAVBAR ── */
 .navbar{background:#FAF8F3;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #EDE7DC;position:sticky;top:0;z-index:100}
@@ -169,6 +171,35 @@ body>*{width:100%;max-width:900px}
   .btn3d{font-size:10.5px;padding:9px 11px;letter-spacing:.03em}
   .btn3d svg{display:none}
 }
+
+/* ── FONT SCALE (единая шкала для компьютера и телефона) ── */
+.breadcrumbs,.section-label,.contacts-label,.gallery-label,.col-label,.commission-label{font-size:11px}
+.hero-desc,.about-text,.commission-text{font-size:14px}
+.infra-text,.tax-label,.tax-value,.distance-label,.distance-value,.distance-title,.loc-t,.loc-v,.contact-phone,.usp-label{font-size:14px}
+.stat-unit,.tax-table-title,.cta-sub,.contact-card .btn-whatsapp,.btn-whatsapp,.btn-cta,.btn-cta-white,.btn3d{font-size:12px}
+.contact-name{font-size:15px}
+.loc-chip{font-size:11px}
+.footer-links{font-size:12px}
+.footer-copy{font-size:11px}
+.hero-title{font-size:36px}
+.commission-title{font-size:22px}
+.cta-title{font-size:24px}
+.contacts-title{font-size:26px}
+.stat-num,.stat-num-red,.stat-num-green{font-size:32px}
+@media(max-width:700px){
+  .hero-title{font-size:30px}
+  .commission-title,.cta-title{font-size:22px}
+  .contacts-title{font-size:24px}
+  .stat-num,.stat-num-red,.stat-num-green{font-size:28px}
+}
+@media(max-width:700px){
+  .hero-desc,.about-text,.commission-text{font-size:15px}
+  .infra-text,.tax-label,.tax-value,.distance-label,.distance-value,.distance-title,.loc-t,.loc-v,.contact-phone,.usp-label{font-size:14px}
+  .loc-chip{font-size:13px}
+  .tax-table-title{font-size:11px}
+  .stat-unit,.cta-sub,.btn-whatsapp,.btn-cta,.btn-cta-white{font-size:12px}
+  .btn3d{font-size:11px}
+}
 </style>
 </head>
 <body id="top">
@@ -212,7 +243,7 @@ body>*{width:100%;max-width:900px}
         <div class="stat-unit">етажа · асансьор</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num" style="font-size:24px">8</div>
+        <div class="stat-num">8</div>
         <div class="stat-unit">басейна</div>
       </div>
       <div class="stat-cell">
